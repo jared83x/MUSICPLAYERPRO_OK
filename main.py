@@ -20,7 +20,7 @@ async def update_visualizer():
 
 def main(page: ft.Page): # page: ft.Page
 
-    page.title = "MusicPlayerPro"
+    page.title = ".::. MusicPlayerPro .::."
 
     page.window.width = 1400
     page.window.height = 850
