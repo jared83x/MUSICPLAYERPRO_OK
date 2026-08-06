@@ -32,9 +32,9 @@ class MusicPlayerApp:
 
                         controls=[
 
-                            LibraryView(
-                                self.player),
-
+                            #Library(self.player),
+                            #Library(self.page),
+                            Library(),
                             PlayerBar()
 
                         ]

@@ -1,17 +1,18 @@
 import flet as ft
 
 from ui.app import MusicPlayerApp
+from ui.visualizer_view import VisualizerView
 import flet as ft
 
 
 def update_visualizer():
 
-    visualizer_view.animate()
+    VisualizerView.animate()
 
 
-ft.page.run_task(
+'''page.run_task(
     update_visualizer
-)
+)'''
 
 
 
@@ -29,4 +30,5 @@ def main(page: ft.Page):
     MusicPlayerApp(page)
 
 
-ft.app(target=main)
+#ft.app(target=main)
+ft.run(main)

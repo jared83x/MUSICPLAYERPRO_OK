@@ -1,6 +1,7 @@
 import flet as ft
 
 from config import SURFACE
+from core.player_controller import PlayerController
 
 
 class PlayerBar(ft.Container):
@@ -8,7 +9,8 @@ class PlayerBar(ft.Container):
     def __init__(self):
 
         super().__init__()
-        self.controller = controller
+        #self.controller = controller
+        self.controller = PlayerController
 
         self.height=90
 
