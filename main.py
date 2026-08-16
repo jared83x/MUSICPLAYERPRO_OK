@@ -3,13 +3,13 @@ import asyncio
 
 from ui.app import MusicPlayerApp
 from ui.visualizer_view import VisualizerView
-import flet as ft
 
-
+visualizer = VisualizerView()
 
 async def update_visualizer():
     await asyncio.sleep(2)
-    VisualizerView.animate()
+    #VisualizerView.animate()
+    visualizer.animate()
 
     
 

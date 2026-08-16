@@ -8,9 +8,10 @@ from sqlalchemy import (
 )
 
 from sqlalchemy import Boolean, ForeignKey
+Base = declarative_base()
 
 
-class Playlist(Base):
+class Playlist(Base): #class Playlist(Base)
 
     __tablename__ = "playlists"
 
@@ -27,7 +28,7 @@ class Playlist(Base):
 
 
 
-class PlaylistSong(Base):
+class PlaylistSong(Base): #class PlaylistSong(Base)
 
     __tablename__ = "playlist_songs"
 
@@ -55,7 +56,7 @@ class PlaylistSong(Base):
 
 
 
-class Favorite(Base):
+class Favorite(Base): #class Favorite(Base)
 
     __tablename__ = "favorites"
 
@@ -74,7 +75,7 @@ class Favorite(Base):
     )
 
 
-Base = declarative_base()
+
 
 
 class Song(Base):

@@ -1,3 +1,4 @@
 python-vlc
 pillow
 sqlalchemy
+mutagen

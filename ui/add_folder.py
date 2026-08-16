@@ -1,5 +1,5 @@
 import flet as ft
-
+import asyncio
 from core.scanner import Scanner
 
 
@@ -15,8 +15,8 @@ class AddFolder:
 
         self.picker=ft.FilePicker(
             on_result=self.result
+            
         )
-
 
         page.overlay.append(
             self.picker
@@ -24,12 +24,15 @@ class AddFolder:
 
 
 
-    def open(self,e):
+    '''def open(self): #def open(self,e)
 
-        self.picker.get_directory_path()
+        self.picker.get_directory_path()'''
 
+    #@staticmethod  
+    async def open(self):
+        path = await self.picker.get_directory_path("Seleccione un directorio.")
 
-
+    
     def result(self,e):
 
         if e.path:

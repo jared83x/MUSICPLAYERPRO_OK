@@ -1,10 +1,14 @@
 import flet as ft
 
-from config import SURFACE
+#from ..config import SURFACE
+from ui.config import SURFACE
 from ui.add_folder import AddFolder
 
+#folder_tool = AddFolder
 
 class Sidebar(ft.Container):
+
+    
 
     def __init__(self):
 
@@ -33,42 +37,56 @@ class Sidebar(ft.Container):
                     ft.Icons.HOME,
                     "Inicio",
                     self.click_list(0)
+                    #AddFolder.open
+                    #self.folder_tool.open()
                 ),
 
                 self.item(
                     ft.Icons.LIBRARY_MUSIC,
                     "Biblioteca",
                     self.click_list(1)
+                    #AddFolder.open
+                    #self.folder_tool.open()
                 ),
 
                 self.item(
                     ft.Icons.ALBUM,
                     "Álbumes",
                     self.click_list(2)
+                    #AddFolder.open
+                    #self.folder_tool.open()
                 ),
 
                 self.item(
                     ft.Icons.PERSON,
                     "Artistas",
                     self.click_list(3)
+                    #AddFolder.open
+                    #self.folder_tool.open()
                 ),
 
                 self.item(
                     ft.Icons.FAVORITE,
                     "Favoritos",
                     self.click_list(4)
+                    #AddFolder.open
+                    #self.folder_tool.open()
                 ),
 
                 self.item(
                     ft.Icons.PLAYLIST_PLAY,
                     "Playlists",
                     self.click_list(5)
+                    #AddFolder.open
+                    #self.folder_tool.open()
                 ),
 
                 self.item(
                     ft.Icons.ADD,
                     "Abrir",
-                    self.click_list(6)
+                    self.click_list(6),
+                    #AddFolder.open()
+                    #self.folder_tool.open()
                 )
 
             ]
@@ -90,7 +108,10 @@ class Sidebar(ft.Container):
         )
 
     def click_list(self,num):
-    
+
+        folder_tool = AddFolder(self.page)
+        #self.page.update()
+
         match num:
             case 0:
                 return 0 # inicio
@@ -105,4 +126,5 @@ class Sidebar(ft.Container):
             case 5:
                 return 5
             case 6:
-                return AddFolder.open
+                #return AddFolder.open(e)
+                return folder_tool.open()
